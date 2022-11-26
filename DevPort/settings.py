@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'login',
     'dashboard',
     'portfolio',
+    'dev_db',
 ]
 
 MIDDLEWARE = [
