@@ -102,10 +102,11 @@
   }
   .headbanner{
         width:100%;
-        
+        padding-top: 150px;
   }
   
   .headbanner .myquote{
+    
       float:right;
       justify-content:left;
       width:85%;
@@ -113,6 +114,7 @@
       color:white;
       font-size:5vw;
       padding:1vw;
+      
       border-top-left-radius:2.5vw;
       border-bottom-left-radius:2.5vw;
       display:grid;

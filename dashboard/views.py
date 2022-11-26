@@ -26,6 +26,7 @@ def dashboard(request):
         grade = request.POST.get('grade')
         startyear = request.POST.get('startyear')
         graduationyear = request.POST.get('graduationyear')
+        status = request.POST.get('status')
         contactemail = request.POST.get('contactemail')
         instagram= request.POST.get('instagram')
         twitter = request.POST.get('twitter')
@@ -44,7 +45,8 @@ def dashboard(request):
             profile.course = course
             profile.grade = grade
             profile.start_year = startyear
-            profile.graduationyear = graduationyear
+            profile.graduation_year = graduationyear
+            profile.status = status
             profile.contactemail = contactemail
             profile.instagram = instagram
             profile.twitter = twitter
@@ -65,6 +67,7 @@ def dashboard(request):
                 grade=grade, 
                 start_year=startyear,
                 graduation_year=graduationyear, 
+                status=status,
                 contact_email=contactemail, 
                 instagram=instagram, 
                 twitter=twitter, 
