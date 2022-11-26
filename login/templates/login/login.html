@@ -16,11 +16,14 @@
 
     <div class="login_page">
 
-        <div class= 'messages'>
-            {% for message in messages %}
-                {{message}}
-            {% endfor %}
-        </div>
+        {% if messages %}
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <div class="login_wrapper">
 

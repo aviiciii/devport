@@ -13,13 +13,10 @@
 
 </head>
 <body>
+    
 
     <div class="container">
 
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-        
         <header>
 
             <h1>
@@ -28,7 +25,19 @@
 
         </header>
 
+        
+
         <main>
+            {% if messages %}
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            
 
             <div class="header_space"></div>
 

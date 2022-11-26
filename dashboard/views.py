@@ -7,11 +7,10 @@ from dev_db.models import Profile
 from django.contrib import messages
 
 # Create your views here.
-@login_required(login_url=LOGIN_REDIRECT_URL)
 def logoutpg(request):
     logout(request)
     messages.success(request, "Logged out successfully!")
-    return redirect("")
+    return redirect("index")
 
 
 @login_required(login_url=LOGIN_REDIRECT_URL)
