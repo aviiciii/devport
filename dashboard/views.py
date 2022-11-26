@@ -24,6 +24,7 @@ def dashboard(request):
         college = request.POST.get('college')
         course = request.POST.get('course')
         grade = request.POST.get('grade')
+        startyear = request.POST.get('startyear')
         graduationyear = request.POST.get('graduationyear')
         contactemail = request.POST.get('contactemail')
         instagram= request.POST.get('instagram')
@@ -42,6 +43,7 @@ def dashboard(request):
             profile.college = college
             profile.course = course
             profile.grade = grade
+            profile.start_year = startyear
             profile.graduationyear = graduationyear
             profile.contactemail = contactemail
             profile.instagram = instagram
@@ -61,6 +63,7 @@ def dashboard(request):
                 college=college, 
                 course=course, 
                 grade=grade, 
+                start_year=startyear,
                 graduation_year=graduationyear, 
                 contact_email=contactemail, 
                 instagram=instagram, 
@@ -71,9 +74,14 @@ def dashboard(request):
             profile.save()
             messages.success(request, "Profile created successfully!")
             return redirect("dashboard")
+    # get the profile
+    try:
+        profile = request.user.profile
+        context= {'profile': profile}
+    except:
+        context={}
 
-        
-    return render(request, 'dashboard/dashboard.html')
+    return render(request, 'dashboard/dashboard.html', context)
 
 
 
