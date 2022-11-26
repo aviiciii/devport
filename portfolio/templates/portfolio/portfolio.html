@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>Mithun Raj</title>
+<title>{{profile.name}}</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,7 +15,7 @@
 
 <body onload="loader()" id="home">
 
-<script src="script.js"></script>
+{% comment %} <script src="script.js"></script> {% endcomment %}
 
 
 
@@ -36,7 +36,7 @@
     </button>
     </div>
 
-    <h1><a href="index.html">Mithun Raj</a></h1>
+    <h1><a href="{% url 'dashboard' %}">{{profile.name}}</a></h1>
 
     <nav id="navbar">
     <ul>
@@ -64,9 +64,9 @@
 <div class="myquote">
 <div class="txt">
 <p class="txt1">Hi,</p>
-<p class="txt2">I am Mithun Raj</p>
+<p class="txt2">I am {{profile.name}}</p>
 <div class=textcontainer>
-<p class="txt3">Web Developer</p>
+<p class="txt3">{{profile.role}}</p>
 </div>
 </div>
 </div>
@@ -74,10 +74,11 @@
 
 <div class="socialicons">
 
-<a href="https://www.instagram.com/themithunraj/" class="fa fa-instagram"></a>
-<a href="https://twitter.com/themithunraj" class="fa fa-twitter"></a>
-<a href="https://www.linkedin.com/in/mithun-raj-k-1904b220b" class="fa fa-linkedin"></a>
-<a href="https://github.com/kmithunraj" class="fa fa-github"></a>
+<a href="{{profile.instagram}}" class="fa fa-instagram"></a>
+<a href="{{profile.linkedin}}" class="fa fa-linkedin"></a>
+<a href="{{profile.github}}" class="fa fa-github"></a>
+<a href="{{profile.twitter}}" class="fa fa-twitter"></a>
+
 
 </div>
 
@@ -91,7 +92,7 @@
 
 <p class="aboutheader">ABOUT</p>
 <p class="aboutbody">
-I am an undergraduate student pursuing B.Tech from the Panimalar Engineering College, Chennai, in Computer Science & Business Systems. I truly believe that I could deliver to your expectations in the desired time framework and give my best while learning the new technologies and industry insights. I am a quick learner.
+{{profile.about}}
 </p>
 
 <div class="nxtbtn"><button class="nxtbtnwhite"><a href="#education">&#x25BC;</a></div>
@@ -110,23 +111,13 @@ I am an undergraduate student pursuing B.Tech from the Panimalar Engineering Col
 <div class="education"><p>EDUCATION</p></div>
 
 <div class="edu">
-<p>INDIAN INSTITUTE OF TECHNOLOGY MADRAS </p>
+<p>{{profile.college}} </p>
 <br>
-<p>2022 - PRESENT</p>
+<p>{{profile.start_year}} - {{profile.graduation_year}}</p>
 <br>
-<p class="degree">B.S. PROGRAMMING AND DATA SCIENCE</p>
-<br/>
-<p class="degree">PURSUING</p>
-</div>
-
-<div class="edu">
-<p>PANIMALAR ENGINEERING COLLEGE </p>
+<p class="degree">{{profile.course}}</p>
 <br>
-<p>2020 - PRESENT</p>
-<br>
-<p class="degree">B.TECH. COMPUTER SCIENCE AND BUSINESS SYSTEMS</p>
-</br>
-<p class="degree">PURSUING</p>
+<p class="degree">{{profile.course_status}}</p>
 </div>
 
 </div>
