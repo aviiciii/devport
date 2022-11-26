@@ -51,8 +51,10 @@
 
             <div class="dashboard_details">
 
-                <form method="post">
-
+                <form action="{% url 'dashboard' %}" method="post">
+                
+                {% csrf_token %}
+                
                 <label for="">Name:</label>
                 <br>
                 <input type="text" name="name" id="name" value="{{ user.username }}">
@@ -111,25 +113,25 @@
                 <br>
                 <br>
 
-                <label for="">Instagram:</label>
+                <label for="instagram">Instagram:</label>
                 <br>
                 <input type="text" name="instagram" id="instagram" value="{{ user.instagram }}">
                 <br>
                 <br>
 
-                <label for="">Linkedin:</label>
+                <label for="linkedin">Linkedin:</label>
                 <br>
                 <input type="text" name="linkedin" id="linkedin" value="{{ user.linkedin }}">
                 <br>
                 <br>
 
-                <label for="">Github:</label>
+                <label for="github">Github:</label>
                 <br>
                 <input type="text" name="github" id="github" value="{{ user.github }}">
                 <br>
                 <br>
 
-                <label for="">Twitter:</label>
+                <label for="twitter">Twitter:</label>
                 <br>
                 <input type="text" name="twitter" id="twitter" value="{{ user.twitter }}">
                 <br>
