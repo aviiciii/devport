@@ -1,0 +1,575 @@
+*{
+    width:100%;
+    margin:0 auto;
+    overflow-x:hidden;
+    padding:0px;
+    scroll-behavior:smooth;
+  }
+  body{
+      z-index:1
+  }
+  
+  header{
+      width:100%;
+      background-color:black;
+      color:white;
+      float:left;
+      text-align:center;
+      position:fixed;
+      top:0;
+      z-index:2
+  }
+  header h1{
+      width:15%;
+      float:left;
+      text-align:left;
+  
+  }
+  header h1 a{
+      text-decoration:none;
+      color:white;
+      padding-left:6px;
+      
+  }
+  header .nav-icon{
+      display:none;
+  }
+  nav{
+      width:70%;
+      float:left;
+      text-align:center;
+      align-items:center;
+      display:flex;
+  }
+  header nav ul{
+      list-style:none;
+      text-align:center;
+      align-items:center;
+      padding:10px;
+      overflow: hidden;
+  
+  }
+  header nav ul li{
+      display:inline;
+      text-align:center;
+      margin:16px;
+      align-items:center;
+  }
+  header nav ul button{
+      display:none;
+  }
+  header nav ul li a{
+      text-decoration:none;
+      color:white;
+      color:white;
+      font-weight:bold;
+      text-align:center;
+      padding:11px;
+  }
+  header nav ul li a:hover{
+                           color:black;
+                           background-color:white;
+  }
+  .active, header nav ul li a:hover{
+      color:black;
+      background-color:white;
+  }
+  header .profile-wrapper{
+      width:14.5%;
+      text-align:right;
+      padding-top:10px;
+      padding-bottom:10px;
+      float:left;
+      
+  }
+  header .profile-wrapper a{
+      text-decoration:none;
+      border-radius:10px;
+      background-color:white;
+      font-weight:bold;
+      color:black;
+      padding:6px;
+      width:100%;
+  }
+  header .profile-wrapper a:hover{
+      border-color:white;
+      background-color:#E3E3E3;
+  }
+  .homepage{
+      width:100%;
+      min-height:100vh;
+      position:relative;
+  }
+  .headbanner{
+        width:100%;
+        
+  }
+  
+  .headbanner .myquote{
+      float:right;
+      justify-content:left;
+      width:85%;
+      background-color:black;
+      color:white;
+      font-size:5vw;
+      padding:1vw;
+      border-top-left-radius:2.5vw;
+      border-bottom-left-radius:2.5vw;
+      display:grid;
+      align-content:right;
+  }
+  .headbanner .myquote .txt{
+      padding:5px;
+      display:inline-block;
+      float:left;
+  
+  }
+  .headbanner .myquote .txt1{
+  float:left;
+    justify-content:left;
+  
+  }
+  .headbanner .myquote .txt2{
+  float:left;
+    justify-content:left;
+  
+  }
+  .headbanner .myquote .textcontainer{
+    display:inline-block;
+    justify-content:left;
+    float:left;
+  }
+  .headbanner .myquote .textcontainer .txt3{
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+    typing 4s steps(50,end);
+    text-align:left;
+    float:left;
+    color:white;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  
+  .socialicons{
+      text-align:center;
+      padding:10px;
+      width:100%;
+  }
+  .fa {
+    padding:15px;
+    width: 20px;
+    height:20px;
+    text-align: center;
+    justify-content:center;
+    align-content:center;
+    text-decoration: none;
+    color:white;
+    background-color:black;
+    border-radius:50%;
+  }
+  .fa:hover {
+    background:white;
+    color:black;
+  }
+  
+  .nxtbtn{
+      width:100%;
+      position:absolute;
+      bottom:5vh;
+      text-align:center;
+  }
+  .nxtbtn .nxtbtnblack{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      border:0;
+      background-color:black;
+      color:white;
+  }
+  .nxtbtn .nxtbtnblack a{
+      text-decoration:none;
+      color:white;
+      font-size:20px;
+  
+  }
+  .nxtbtn{
+      width:100%;
+      position:absolute;
+      bottom:5vh;
+      text-align:center;
+  }
+  .nxtbtn .nxtbtnwhite{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      border:0;
+      background-color:white;
+      color:black;
+  }
+  .nxtbtn .nxtbtnwhite a{
+      text-decoration:none;
+      color:black;
+      font-size:20px;
+  }
+  .aboutpage{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background-color:black;
+      position:relative;
+  }
+  .about{
+      width:100%;
+      text-align:center;
+      background-color:black;
+      color:white;
+      
+  }
+  .about .aboutheader{
+      padding:px;
+      text-align:center;
+      font-size:3vw;
+  }
+  .about .aboutbody{
+      width:90%;
+      font-size:20px;
+  }
+  .educationpage{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+  .educations{
+      width:70%;
+      padding:20px;
+  }
+  .educations .education{
+      text-align:center;
+      font-size:30px;
+  }
+  .educations .edu{
+      width:80%;
+      text-align:left;
+      background-color:black;
+      color:white;
+      padding:20px;
+      margin:50px auto;
+      border-radius:10px;
+      font-size:23px;
+      box-shadow: 0 0 25px 0 black; 
+  }
+  .skillspage{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+  
+  .skills{
+      width:50%;
+      padding-top:10px;
+      padding-bottom:10px;
+      padding-bottom:20px;
+      margin:50px auto;
+  }
+  .skills .skill{
+      text-align:center;
+      font-size:30px;
+  }
+  .skills .skillname{
+      font-size:23px;
+      text-align:left;
+      padding:10px;
+  }
+  .skills .skillpercent{
+      font-size:20px;
+      text-align:right;
+  }
+  .skills .skillz{
+      background-color:black;
+      color:white;
+      border-radius:10px;
+      margin:35px auto;
+      box-shadow: 0 0 20px 0 black; 
+      width:90%;
+  }
+  .skills .skillz .percent1{
+      background-color:grey;
+      width:90%;
+      height:13px;
+      float:left;
+      border-radius:5px;
+  }
+  .skills .skillz .percent2{
+      background-color:grey;
+      width:90%;
+      height:13px;
+      float:left;
+      border-radius:5px;
+  }
+  .skills .skillz .percent3{
+      background-color:grey;
+      width:80%;
+      height:13px;
+      float:left;
+      border-radius:5px;
+  }
+  footer{
+  text-align:center;
+  width:100%;
+  }
+  .footer-wrapper{
+      background-color:black;
+      color:white;
+      text-align:center;
+      padding:10px;
+      font-size:18px;
+      
+  }
+  footer a{
+      text-decoration:none;
+      color:white;
+  }
+  
+  
+  
+  
+  
+  
+  @media screen and (max-width: 1140px){
+      
+      header h1{
+          width:59%;
+          float:left;
+          text-align:center;
+          
+      }
+      header h1 a{
+      text-decoration:none;
+      color:white;
+      
+      }
+      header .nav-icon{
+          display:block;
+          width:18%;
+          text-align:center;
+          float:left;
+          align-content:center;
+      }
+      
+      header .nav-icon button{
+          padding-left:6px;
+          padding-top:2px;
+          border:none;
+          text-align:center;
+          background-color:transparent;
+          color:white;
+      }
+      header .nav-icon button div{
+          border:1px;
+          background-color:white;
+          width: 31px;
+          height:4px;
+          margin: 5px 0;
+          border-radius:5px;
+      }
+      header nav{
+          width:35%;
+          float:left;
+          position:fixed;
+          left:0;
+          text-align:center;
+          background-color:black;
+          padding:0px;
+          display:none;
+          border-top-right-radius:15px;
+          border-bottom-right-radius:15px;
+      }
+      header nav ul{
+          list-style:none;
+          text-align:center;
+          padding:0px;
+      }
+      header nav ul li{
+          text-align:center;
+          padding:0px;
+      }
+      header nav ul button{
+      display:block;
+      width:13%;
+      float:left;
+      text-align:left;
+      background-color:black;
+      font-size:35px;
+      text-align:center;
+      color:white;
+      border:none;
+      padding-bottom:5px;
+      }
+      header nav ul button:hover{
+          background-color:white;
+          color:black;
+      }
+      header nav ul li a{
+          text-decoration:none;
+          color:white;
+          font-weight:bold;
+          display:block;
+          text-align:center;
+          padding-left:0px;
+      }
+      header nav ul li a:hover{
+          color:black;
+          background-color:white;
+      }
+      .active, header nav ul li a:hover{
+          color:black;
+          background-color:white;
+      }
+      header .profile-wrapper{
+          width:18%;
+          float:right;
+          text-align:right;
+          padding-top:10px;
+          padding-bottom:10px;
+          padding-right:7px;
+      
+  }
+  
+  header .profile-wrapper a{
+      text-decoration:none;
+      font-size:14px;
+      border-radius:10px;
+      background-color:white;
+      font-weight:bold;
+      color:black;
+      padding:6px;
+  }
+  header .profile-wrapper a:hover{
+      border-color:white;
+      background-color:#E3E3E3;
+  }
+  
+  .headbanner .myquote{
+      float:right;
+      justify-content:left;
+      width:90%;
+      background-color:black;
+      color:white;
+      font-size:6vw;
+      padding:1vw;
+      border-top-left-radius:2.5vw;
+      border-bottom-left-radius:2.5vw;
+      display:grid;
+      align-content:right;
+  }
+  
+  .about{
+      width:100%;
+      text-align:center;
+      background-color:black;
+      color:white;
+      justify-content:center;
+      align-items:center;
+      
+  }
+  .about .aboutheader{
+      font-size:27px;
+      text-align:center;
+  }
+  .about .aboutbody{
+      width:90%;
+      padding:10px;
+      font-size:17px;
+  }
+  .educationpage{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+  .educations{
+      width:90%;
+      padding:20px;
+  }
+  .educations .education{
+      text-align:center;
+      font-size:30px;
+  }
+  .educations .edu{
+      width:90%;
+      text-align:left;
+      background-color:black;
+      color:white;
+      padding:20px;
+      margin:50px auto;
+      border-radius:10px;
+      font-size:20px;
+      box-shadow: 0 0 25px 0 black; 
+  }
+  .educations.edu .degree{
+      font-size:10px;
+  }
+  
+  }
+  
+  @media screen and (max-width: 600px){
+      
+      
+      .headbanner .myquote{
+      float:right;
+      justify-content:left;
+      width:85%;
+      background-color:black;
+      color:white;
+      font-size:9vw;
+      padding:1vw;
+      border-top-left-radius:2.5vw;
+      border-bottom-left-radius:2.5vw;
+      display:grid;
+      align-content:right;
+  }
+  
+  .educationpage{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+  .educations{
+      width:90%;
+      padding:20px;
+  }
+  .educations .education{
+      text-align:center;
+      font-size:30px;
+  }
+  .educations .edu{
+      width:90%;
+      text-align:left;
+      background-color:black;
+      color:white;
+      padding:20px;
+      margin:50px auto;
+      border-radius:10px;
+      font-size:15px;
+      box-shadow: 0 0 25px 0 black; 
+  }
+  .educations.edu .degree{
+      font-size:15px;
+  }
+      
+  }

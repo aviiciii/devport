@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevPort</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="script.js">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>
+                <img src="{% static 'img/logo.png' %}" alt="DevPort">
+            </h1>
+
+        </header>
+
+        <main>
+
+            <div class="header_space"></div>
+
+            <div class="banner_wrapper">
+
+                <div class="banner_info">
+
+                    <h1>Looking to build a portfoilio</h1>
+
+                    <p>Build your personally customized stunning portfolio in seconds for free</p>
+
+                    <br>
+                   
+                    <button onclick="location.href='{% url 'login' %}'">Build Now</button>
+
+                </div>
+
+                <div class="banner_img">
+
+                    <img src="{% static 'img/banner.jpg' %}" alt="">
+
+                </div>
+            
+            </div>
+
+        </main>
+    </div>
+    
+</body>
+</html>

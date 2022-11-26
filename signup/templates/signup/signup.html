@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Signup</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="/script.js">
+
+</head>
+<body>
+
+    <div class="login_page">
+
+        <div class="login_wrapper">
+
+            <img src="{% static 'img/logo.png' %}" alt="">
+
+            <div class="login_form">
+
+                <form method="post" action="{% url 'signup' %}" id="formLogin">
+
+                    {% csrf_token %} 
+
+                    
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" name="username" id="username" required style="width: 300px; font-size: 1.4rem; padding: 3px;">
+
+                    <br>
+                    <br>
+
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" name="password" id="password" required>
+
+                    <br>            
+                    <br>
+
+                    <label for="password">Confirm Password</label>
+                    <br>
+                    <input type="password" name="password2" id="password" required>
+
+                    <br>            
+                    <br>
+
+                    <input type="submit" value="Signup">
+
+                </form>
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+            </div>
+
+            <div>
+                
+                {% for message in messages %}
+
+                {{ message }}
+
+                {% endfor %}
+            
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
