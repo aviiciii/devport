@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from DevPort.settings import LOGIN_REDIRECT_URL
+from dev_db.models import Profile
 #import messages
 from django.contrib import messages
 
@@ -31,7 +32,8 @@ def dashboard(request):
         linkedin = request.POST.get('linkedin')
 
         # check if user has profile
-        if request.user.profile:
+        try:
+            profile = Profile.objects.get(user=request.user)
             # update
             profile = request.user.profile
             profile.name = name
@@ -49,6 +51,27 @@ def dashboard(request):
             profile.save()
             messages.success(request, "Profile updated successfully!")
             return redirect("dashboard")
+        except:
+            # create
+            profile = Profile(
+                user=request.user, 
+                name=name, 
+                role=role, 
+                about=about, 
+                college=college, 
+                course=course, 
+                grade=grade, 
+                graduation_year=graduationyear, 
+                contact_email=contactemail, 
+                instagram=instagram, 
+                twitter=twitter, 
+                github=github, 
+                linkedin=linkedin
+            )
+            profile.save()
+            messages.success(request, "Profile created successfully!")
+            return redirect("dashboard")
+
         
     return render(request, 'dashboard/dashboard.html')
 
