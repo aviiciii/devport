@@ -16,7 +16,11 @@
 
     <div class="login_page">
 
-        {{ message }}
+        <div class= 'messages'>
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        </div>
 
         <div class="login_wrapper">
 
