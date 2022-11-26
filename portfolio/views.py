@@ -24,7 +24,7 @@ def portfolio_public(request, profile_id):
             'profile': profile,
         }
     except:
-        messages.error(request, "Profile not found!")
+        messages.error(request, "Portfolio not found!")
         return redirect("index")
 
     return render(request, 'portfolio/portfolio.html', context)
