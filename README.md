@@ -1,5 +1,5 @@
 # devport
-A portal to build a portfolio page using data received from user. Mini project done for my senior.
+A portal to build a portfolio page using data received from user. Project done for a friend.
 
 
 
